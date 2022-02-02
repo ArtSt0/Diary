@@ -1,0 +1,25 @@
+buildscript {
+    ext{
+        compose_version = "1.2.0-alpha02"
+        moshi_version = "1.13.0"
+        dagger_version = "2.40.5"
+        navigation_version = "2.5.0-alpha01"
+        realm_version = "10.10.1"
+        mockito_version = "3.4.6"
+        junit_version = "4.13.2"
+    }
+    dependencies {
+        classpath "io.realm:realm-gradle-plugin:$realm_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+    }
+}
+plugins {
+    id 'com.android.application' version '7.1.0' apply false
+    id 'com.android.library' version '7.1.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+    //id 'androidx.navigation.safeargs.kotlin' version '2.5.0-alpha01' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

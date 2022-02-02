@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+            <variable
+                name="task"
+                type="ru.artsto.diary.realmModels.Task" />
+
+            <variable
+                name="rvClick"
+                type="ru.artsto.diary.RecyclerViewTask.OnItemClickTask" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="@{()->rvClick.onItemTaskClick(task)}"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="4dp"
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                >
+            </TextView>
+            <TextView
+                android:padding="4dp"
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                >
+            </TextView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
